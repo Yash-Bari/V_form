@@ -28,4 +28,9 @@ class Volunteer(models.Model):
         ('Esports Tournament', 'Esports Tournament'),
     ]
     event = models.CharField(max_length=100, choices=event_choices)
+    registration_for_choices = [
+        ('Club Member', 'Club Member'),
+        ('Event Volunteer', 'Event Volunteer'),
+    ]
+    registration_for = models.CharField(max_length=50, choices=registration_for_choices)
     reason = models.TextField()
